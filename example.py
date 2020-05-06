@@ -24,4 +24,7 @@ def Authentication():
 
    wks = gc.open('ひなのシート').sheet1
 
-   test = 'OK!!'
+   return wks
+
+
+test = 'OK!!'
