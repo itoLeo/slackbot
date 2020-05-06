@@ -1,13 +1,9 @@
 import random
 from slackbot.bot import respond_to     # @botname: で反応するデコーダ
-import example
+import GoogleAuthentication
 
-wks = example.Authentication()
+wks = GoogleAuthentication.Authentication()
 
-@respond_to('テストa')
-def test(message):
-  test_test = example.Authentication.test
-  message.send(test_test) # メンション
 
 @respond_to('お寿司召喚')
 def read_sheet(message):

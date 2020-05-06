@@ -19,12 +19,7 @@ def Authentication():
                   "client_x509_cert_url":  os.environ['SHEET_CLIENT_X509_CERT_URL']
                }
    credentials = ServiceAccountCredentials.from_json_keyfile_dict(credential, scope)
-
    gc = gspread.authorize(credentials)
-
    wks = gc.open('ひなのシート').sheet1
 
    return wks
-
-
-test = 'OK!!'
