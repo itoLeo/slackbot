@@ -26,9 +26,9 @@ gc = gspread.authorize(credentials)
 
 wks = gc.open('ひなのシート').sheet1
 
-@respond_to('テスト')
+@respond_to('テストa')
 def test(message):
-  test_test = example.test
+  test_test = example.Authentication.test
   message.send(test_test) # メンション
 
 @respond_to('お寿司召喚')
