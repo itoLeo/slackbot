@@ -3,7 +3,7 @@ import gspread
 import os
 from oauth2client.service_account import ServiceAccountCredentials
 from slackbot.bot import respond_to     # @botname: で反応するデコーダ
-import google
+import plugins.google.example
 
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
@@ -28,7 +28,7 @@ wks = gc.open('ひなのシート').sheet1
 
 @respond_to('テスト')
 def test(message):
-  test_test = google.test
+  test_test = plugins.google.example.test
   message.send(test_test) # メンション
 
 @respond_to('お寿司召喚')
