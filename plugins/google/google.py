@@ -23,3 +23,5 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(credential, scope
 gc = gspread.authorize(credentials)
 
 wks = gc.open('ひなのシート').sheet1
+
+test = 'OK!'

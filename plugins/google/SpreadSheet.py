@@ -3,6 +3,7 @@ import gspread
 import os
 from oauth2client.service_account import ServiceAccountCredentials
 from slackbot.bot import respond_to     # @botname: で反応するデコーダ
+from google import test
 
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
@@ -24,6 +25,11 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(credential, scope
 gc = gspread.authorize(credentials)
 
 wks = gc.open('ひなのシート').sheet1
+
+@respond_to('テスト')
+def test(message):
+  test_test = test
+  message.send(test_test) # メンション
 
 @respond_to('お寿司召喚')
 def read_sheet(message):
